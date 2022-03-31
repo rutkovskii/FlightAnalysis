@@ -45,7 +45,7 @@ USER_INPUT = range(1)
 FLIGHTS = pd.read_csv('all_flights.csv',index_col=0)
 RU_AIRPORTS = pd.read_csv('russian_airports.csv',index_col=0)
 INT_AIRPORTS = pd.read_csv('international_airports.csv',index_col=0)
-print(FLIGHTS)
+logger(FLIGHTS)
 FLIGHTS['day'] = pd.to_datetime(FLIGHTS['day'], format="%Y/%m/%d").dt.date
 
 #print(FLIGHTS)
