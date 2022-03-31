@@ -1,0 +1,284 @@
+,Airport,ICAO,Country
+0,Amderma Airport,ULDD,Russia
+1,Kirovsk-Apatity Airport (Khibiny),ULMK,Russia
+2,Talagi Airport,ULAA,Russia
+3,Vaskovo Airport,ULAH,Russia
+4,Cherepovets Airport,ULWC,Russia
+5,Khrabrovo Airport,UMKK,Russia
+6,Murmansk Airport,ULMM,Russia
+7,Naryan-Mar Airport,ULAM,Russia
+8,Besovets Airport,ULPB,Russia
+9,Pskov Airport,ULOO,Russia
+10,Pulkovo Airport,ULLI,Russia
+11,Syktyvkar Airport,UUYY,Russia
+12,Ukhta Airport,UUYH,Russia
+13,Usinsk Airport,UUYS,Russia
+14,Varandey Airport,ULDW,Russia
+15,Velikiy Ustyug Airport,ULWU,Russia
+16,Vologda Airport,ULWW,Russia
+17,Vorkuta Airport,UUYW,Russia
+18,Belgorod International Airport,UUOB,Russia
+19,Bryansk International Airport,UUBP,Russia
+20,Ivanovo Yuzhny Airport,UUBI,Russia
+21,Kaluga (Grabtsevo) Airport,UUBC,Russia
+22,Kostroma Airport,UUBA,Russia
+23,Kursk Vostochny Airport (Khalino),UUOK,Russia
+24,Lipetsk Airport,UUOL,Russia
+25,Moscow Domodedovo Airport,UUDD,Russia
+26,Sheremetyevo International Airport,UUEE,Russia
+27,Vnukovo International Airport,UUWW,Russia
+28,Zhukovsky International Airport (Ramenskoye),UUBW,Russia
+29,Ostafyevo International Business Airport,UUMO,Russia
+30,Sasovo Airport,UUBG,Russia
+31,Smolensk North Airport,UUBS,Russia
+32,Stary Oskol Airport,UUOS,Russia
+33,Tambov Donskoye Airport,UUOT,Russia
+34,Semyazino Airport,UUBL,Russia
+35,Voronezh International Airport (Chertovitskoye),UUOO,Russia
+36,Pridacha Airport,UUOD,Russia
+37,Tunoshna Airport,UUDL,Russia
+38,Bugulma Airport,UWKB,Russia
+39,Buguruslan Severny Airport,UWWB,Russia
+40,Cheboksary International Airport,UWKS,Russia
+41,Izhevsk Airport,USII,Russia
+42,Kazan International Airport,UWKD,Russia
+43,Pobedilovo Airport,USKK,Russia
+44,Begishevo Airport,UWKE,Russia
+45,Strigino International Airport,UWGG,Russia
+46,Soldatskaya Tashla Airport,UWLS,Russia
+47,Orenburg Tsentralny Airport,UWOO,Russia
+48,Orsk Airport,UWOR,Russia
+49,Penza Airport,UWPP,Russia
+50,Perm International Airport (Bolshoye Savino),USPP,Russia
+51,Kurumoch International Airport,UWWW,Russia
+52,Bezymyanka Airport,UWWG,Russia
+53,Saransk Airport,UWPS,Russia
+54,Gagarinsky International Airport,UWSG,Russia
+55,Saratov Tsentralny Airport,UWSS,Russia
+56,Ufa International Airport,UWUU,Russia
+57,Ulyanovsk Baratayevka Airport,UWLL,Russia
+58,Ulyanovsk Vostochny Airport,UWLW,Russia
+59,Yoshkar-Ola Airport,UWKJ,Russia
+60,Vityazevo Airport,URKA,Russia
+61,Narimanovo Airport,URWA,Russia
+62,Elista Airport,URWI,Russia
+63,Gelendzhik Airport,URKG,Russia
+64,Krasnodar International Airport (Pashkovsky),URKK,Russia
+65,Platov International Airport,URRP,Russia
+66,Sochi International Airport,URSS,Russia
+67,Taganrog South Airport [ru],URRT,Russia
+68,Volgograd International Airport (Gumrak),URWW,Russia
+69,Yeysk Airport,URKE,Russia
+70,Grozny Airport,URMG,Russia
+71,"Magas Airport (Oskanov, Sleptsovskaya)",URMS,Russia
+72,Uytash Airport,URML,Russia
+73,Mineralnye Vody Airport,URMM,Russia
+74,Nalchik Airport,URMN,Russia
+75,Shpakovskoye Airport,URMT,Russia
+76,Beslan Airport,URMO,Russia
+77,Beloyarsk Airport,USHQ,Russia
+78,Beryozovo Airport,USHB,Russia
+79,Bovanenkovo Airport,USDB,Russia
+80,Balandino Airport,USCC,Russia
+81,Igrim Airport,USHI,Russia
+82,Khanty-Mansiysk Airport,USHH,Russia
+83,Kogalym Airport,USRK,Russia
+84,Kondinskoye Airport,USHK,Russia
+85,Kurgan Airport,USUU,Russia
+86,Magnitogorsk International Airport,USCM,Russia
+87,Nadym Airport,USMM,Russia
+88,Nizhnevartovsk Airport,USNN,Russia
+89,Novy Urengoy Airport,USMU,Russia
+90,Noyabrsk Airport,USRO,Russia
+91,Nyagan Airport,USHN,Russia
+92,Sabetta International Airport,USDA,Russia
+93,Salekhard Airport,USDD,Russia
+94,Sovetsky Airport (Tyumenskaya),USHS,Russia
+95,Surgut International Airport,USRR,Russia
+96,Tarko-Sale Airport,USDS,Russia
+97,Tolka Airport,USDO,Russia
+98,Roshchino International Airport,USTR,Russia
+99,Plekhanovo Airport,USTL,Russia
+100,Uray Airport,USHU,Russia
+101,Urengoy Airport,USDU,Russia
+102,Yamburg Airport,USMQ,Russia
+103,Koltsovo International Airport,USSS,Russia
+104,Abakan Airport,UNAA,Russia
+105,Barnaul Airport (Mikhailovka),UNBB,Russia
+106,Bodaybo Airport,UIKB,Russia
+107,Bratsk Airport,UIBB,Russia
+108,Chara Airport,UIAR,Russia
+109,Kadala Airport,UIAA,Russia
+110,Erbogachen Airport,UIKE,Russia
+111,Gorno-Altaisk Airport,UNBG,Russia
+112,Igarka Airport,UOII,Russia
+113,Irkutsk International Airport,UIII,Russia
+114,Irkutsk Northwest Airport (Irkutsk-2),UIIR,Russia
+115,Kemerovo Airport,UNEE,Russia
+116,Khatanga Airport,UOHH,Russia
+117,Kirensk Airport,UIKK,Russia
+118,Kodinsk Airport,UNKI,Russia
+119,Yemelyanovo Airport,UNKL,Russia
+120,Cheremshanka Airport,UNKM,Russia
+121,Kyzyl Airport,UNKY,Russia
+122,Mama Airport (Mamsky),UIKM,Russia
+123,Nizhneangarsk Airport,UIUN,Russia
+124,Alykel Airport,UOOO,Russia
+125,Spichenkovo Airport,UNWW,Russia
+126,Tolmachevo Airport,UNNT,Russia
+127,Yeltsovka Airport,UNNE,Russia
+128,Omsk Tsentralny Airport,UNOO,Russia
+129,Podkamennaya Tunguska Airport,UNIP,Russia
+130,Sharypovo Airport,UNKO,Russia
+131,Shushenskoye Airport (Kazancevo),UNAU,Russia
+132,Strezhevoy Airport,UNSS,Russia
+133,Taksimo Airport,UIKG,Russia
+134,Bogashevo Airport,UNTT,Russia
+135,Turukhansk Airport,UOTT,Russia
+136,Baikal International Airport (Mukhino),UIUU,Russia
+137,Ust-Kut Airport,UITT,Russia
+138,Yeniseysk Airport,UNII,Russia
+139,Aldan Airport,UEEA,Russia
+140,Ugolny Airport,UHMA,Russia
+141,Munuk Airport,UHNA,Russia
+142,Aykhal Airport,UERA,Russia
+143,Batagay Airport,UEBB,Russia
+144,Belaya Gora Airport,UESG,Russia
+145,Beringovsky Airport [ru],UHMR,Russia
+146,Ignatyevo Airport,UHBB,Russia
+147,Bogorodskoye Airport,UHNB,Russia
+148,Chersky Airport,UESS,Russia
+149,Chokurdakh Airport,UESO,Russia
+150,Chulman Neryungri Airport,UELL,Russia
+151,Chumikan Airport,UHHY,Russia
+152,Deputatsky Airport,UEWD,Russia
+153,Ekimchan Airport [ru],UHBP,Russia
+154,Iturup Airport,UHSI,Russia
+155,Keperveyem Airport,UHMK,Russia
+156,Novy Airport,UHHH,Russia
+157,Teply Klyuch Airport,UEMH,Russia
+158,Kherpuchi Airport [ru],UHNH,Russia
+159,Moma Airport,UEMA,Russia
+160,Komsomolsk-on-Amur Airport (Khurba),UHKK,Russia
+161,Kresta Bay Airport,UHME,Russia
+162,Kupol Airport,UHED,Russia
+163,Lavrentiya Airport,UHML,Russia
+164,Lensk Airport,UERL,Russia
+165,Sokol Airport,UHMM,Russia
+166,Magan Airport,UEMM,Russia
+167,Markovo Airport,UHMO,Russia
+168,Milkovo Airport,UHPM,Russia
+169,Mirny Airport,UERR,Russia
+170,Nikolayevsk-on-Amur Airport,UHNN,Russia
+171,Nikolskoye Airport,UHPX,Russia
+172,Nogliki Airport,UHSN,Russia
+173,Nyurba Airport,UENN,Russia
+174,Okha Airport,UHSH,Russia
+175,Okhotsk Airport,UHOO,Russia
+176,Olenyok Airport,UERO,Russia
+177,Olyokminsk Airport,UEMO,Russia
+178,Omolon Airport,UHMN,Russia
+179,Omsukchan Airport,UHMF,Russia
+180,Ossora Airport,UHPD,Russia
+181,Ozernaya Airport,UHQO,Russia
+182,Pakhachi Airport,UHPA,Russia
+183,Palana Airport,UHPL,Russia
+184,Yelizovo Airport,UHPP,Russia
+185,Pevek Airport,UHMP,Russia
+186,Provideniya Bay Airport,UHMD,Russia
+187,Sakkyryr Airport,UEBS,Russia
+188,Sangar Airport,UEMS,Russia
+189,Saskylakh Airport,UERS,Russia
+190,Severo-Evensk Airport,UHMW,Russia
+191,Seymchan Airport,UHMS,Russia
+192,Shakhtyorsk Airport,UHSK,Russia
+193,Sobolevo Airport,UHQO,Russia
+194,Srednekolymsk Airport,UESK,Russia
+195,Suntar Airport,UHPS,Russia
+196,Talakan Airport (Vitim),UECT,Russia
+197,Tigil Airport,UHPG,Russia
+198,Tiksi Airport,UEST,Russia
+199,Tilichiki Airport,UHPT,Russia
+200,Tukchi Airport,UHOI,Russia
+201,Zonalnoye Airport,UHSO,Russia
+202,Tynda Airport,UHBW,Russia
+203,Polyarny Airport (Udachnaya),UERP,Russia
+204,Urgalan Airport,UHNU,Russia
+205,Ust-Kamchatsk Airport,UHPK,Russia
+206,Ust-Kuyga Airport,UEBT,Russia
+207,Ust-Maya Airport,UEMU,Russia
+208,Ust-Nera Airport,UEMT,Russia
+209,Verkhnevilyuysk Airport,UENI,Russia
+210,Vilyuisk Airport,UENW,Russia
+211,Vladivostok International Airport (Knevichi),UHWW,Russia
+212,Yakutsk Airport,UEEE,Russia
+213,Yuzhno-Kurilsk Mendeleyevo Airport,UHSM,Russia
+214,Yuzhno-Sakhalinsk Airport (Khomutovo),UHSS,Russia
+215,Zeya Airport [ru],UHBE,Russia
+216,Zhigansk Airport,UEVV,Russia
+217,Zyryanka Airport,UESU,Russia
+218,Chelyabinsk Shagol Airport,USCG,Russia
+219,Mys Shmidta Airport,UHMI,Russia
+220,Burevestnik Airport,UHSB,Russia
+221,Dzyomgi Airport,UHKD,Russia
+222,Kubinka (air base),UUMB,Russia
+223,Magdagachi Airport,UHBI,Russia
+224,Chkalovsky Airport,UUMU,Russia
+225,Bakharevka Airport,USPB,Russia
+226,Pushkin Airport,ULLP,Russia
+227,Migalovo (air base),UUEM,Russia
+228,Yevpatoria Airport,URFE,Russia
+229,Achinsk Airport,UNKS,Russia
+230,Yermolino Airport (Borovsk),UUWE,Russia
+231,Balakovo Airport,UWSB,Russia
+232,Baikit Airport,UNIB,Russia
+233,Biysk Airport,UNBI,Russia
+234,Boguchany Airport,UNKB,Russia
+235,Severouralsk Airport,USSE,Russia
+236,Chaybukha Airport,UHMG,Russia
+237,Chistopol Airport,UWKI,Russia
+238,Dikson Airport,UODD,Russia
+239,Dudinka Airport,UROD,Russia
+240,Inta Airport,UUYI,Russia
+241,Izhma Airport,UUYV,Russia
+242,Kazachinsk Airport,UITK,Russia
+243,Borisoglebskoye Airfield,UWKG,Russia
+244,Kerch Airport,URFK,Russia
+245,Kimry Airport,UUEI,Russia
+246,Tretyakovo Airport (Lukhovitsy),UUMT,Russia
+247,Kolpashevo Airport,UNLL,Russia
+248,Kotlas Airport,ULKK,Russia
+249,Kozyrevsk Airport,UHPO,Russia
+250,Krasnokamensk Airport,UIAE,Russia
+251,Kyzyl-Syr Airport,UENK,Russia
+252,Leshukonskoye Airport,ULAL,Russia
+253,Magadan-13 Airport,UHMT,Russia
+254,Menzelinsk Airport,UWKP,Russia
+255,Mezen Airport,ULAE,Russia
+256,Myachkovo Airport,UUBM,Russia
+257,Neftekamsk Airport,UWUF,Russia
+258,Valek Airport,UOOW,Russia
+259,Oktyabrsky Airport,UWUK,Russia
+260,Pechora Airport,UUYP,Russia
+261,Rubtsovsk Airport,UNBR,Russia
+262,Ryazan Turlatovo Airport,UUWR,Russia
+263,Rybinsk Staroselye,UUBK,Russia
+264,Sarov Airport,XUDM,Russia
+265,Severo-Eniseysk Airport,UNIS,Russia
+266,Sibay Airport,UWUA,Russia
+267,Zavodskoe Airport,URFW,Russia
+268,Snezhnogorsk Airport,UOIC,Russia
+269,Berezniki Airport,USPT,Russia
+270,Solovki Airport,ULAS,Russia
+271,Staraya Russa Airport,ULNR,Russia
+272,Susuman Airport,UHMH,Russia
+273,Svetlogorsk Airport,UOIG,Russia
+274,Svobodny Airport,UHBS,Russia
+275,Tura Airport,UNIT,Russia
+276,Ulan-Ude Vostochny Airport,UIUW,Russia
+277,Ust-Ilimsk Airport,UIBS,Russia
+278,Ust-Tsylma Airport,UUYX,Russia
+279,Vanavara Airport,UNIW,Russia
+280,Vuktyl Airport,UUYK,Russia
+281,Zheleznogorsk Airport,UIBV,Russia
+282,Sevastopol International Airport (Belbek),URFB,Russia
