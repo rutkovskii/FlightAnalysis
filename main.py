@@ -42,9 +42,9 @@ logger = logging.getLogger(__name__)
 USER_INPUT = range(1)
 
 
-FLIGHTS = pd.read_csv('https://media.githubusercontent.com/media/rutkovskii/FlightAnalysis/main/all_flights.csv?token=AQY4URGUPAT2NU6AQFUFVCTCIY5QS',index_col=0)
-RU_AIRPORTS = pd.read_csv('https://raw.githubusercontent.com/rutkovskii/FlightAnalysis/main/russian_airports.csv?token=GHSAT0AAAAAABOLHVSBJYNMFMFMQTQWLDXIYSGFWAQ',index_col=0)
-INT_AIRPORTS = pd.read_csv('https://media.githubusercontent.com/media/rutkovskii/FlightAnalysis/main/international_airports.csv?token=AQY4URFKIFO6EV734ZM64WDCIY5TQ',index_col=0)
+FLIGHTS = pd.read_csv('https://raw.githubusercontent.com/rutkovskii/FlightAnalysis/main/all_flights.csv?token=GHSAT0AAAAAABOLHVSBD3OH3VCNBCR76WH6YSGF5LQ',index_col=0)
+RU_AIRPORTS = pd.read_csv('https://raw.githubusercontent.com/rutkovskii/FlightAnalysis/main/russian_airports.csv?token=GHSAT0AAAAAABOLHVSA73YAZ3GCGPMMDYCMYSGF6HQ',index_col=0)
+INT_AIRPORTS = pd.read_csv('https://raw.githubusercontent.com/rutkovskii/FlightAnalysis/main/international_airports.csv?token=GHSAT0AAAAAABOLHVSAWMVM7VPDKMZ6OODQYSGF6ZA',index_col=0)
 #logger.info(FLIGHTS)
 FLIGHTS['day'] = pd.to_datetime(FLIGHTS['day'], format="%Y/%m/%d").dt.date
 
