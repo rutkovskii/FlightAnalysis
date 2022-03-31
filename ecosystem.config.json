@@ -1,8 +1,0 @@
-{
-    "apps": [{
-        "name": "FlightAnalysis",
-        "script": "source venv/bin/activate && python main.py",
-        "wait_ready": true,
-        "autorestart": true
-    }]
-}
