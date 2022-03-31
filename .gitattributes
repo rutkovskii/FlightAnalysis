@@ -1,0 +1,7 @@
+flightlist_20220101_20220131.csv filter=lfs diff=lfs merge=lfs -text
+flightlist_20220201_20220228.csv filter=lfs diff=lfs merge=lfs -text
+flightlist_20220101_20220131.csv.gz filter=lfs diff=lfs merge=lfs -text
+flightlist_20220201_20220228.csv.gz filter=lfs diff=lfs merge=lfs -text
+all_flights.csv filter=lfs diff=lfs merge=lfs -text
+russian_aiports.csv filter=lfs diff=lfs merge=lfs -text
+international_airports.csv filter=lfs diff=lfs merge=lfs -text
