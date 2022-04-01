@@ -13,6 +13,7 @@ Send /start to initiate the conversation.
 Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
+
 import pandas as pd
 import re
 from datetime import datetime
@@ -157,13 +158,13 @@ def ask_user(update: Update, context: CallbackContext):
 
         # Not comma separated
         if len(elements) < 2:
-            update.message.reply_text('You forgot to add comma after date. Enter Date and Airport Again')
-            continue
+            update.message.reply_text('You forgot to add comma after date. Type /start and then enter Date and Airport Again!')
+            return ConversationHandler.END
 
         # Missing airport or date
         if (elements[0] == "") or (elements[1] == ""):
-            update.message.reply_text('You forgot to add date or airport. Enter Date and Airport Again')
-            continue
+            update.message.reply_text('You forgot to add date or airport. Type /start and then enter Date and Airport Again')
+            return ConversationHandler.END
 
         # Cleaning date
         user_date = elements[0]
@@ -175,8 +176,8 @@ def ask_user(update: Update, context: CallbackContext):
 
         # If invalid Date
         if not match:
-            update.message.reply_text('You entered invalid date. Enter Date and Airport Again')
-            continue
+            update.message.reply_text('You entered invalid date. Type /start and then enter Date and Airport Again')
+            return ConversationHandler.END
 
         # Extracting all elements in the string
         month = user_date.split(' ')[1]
@@ -198,8 +199,8 @@ def ask_user(update: Update, context: CallbackContext):
         ru_port = RU_AIRPORTS[RU_AIRPORTS["Airport"].str.contains(user_airport)]
 
         if ru_port.empty:
-            update.message.reply_text('You entered incorrect airport name. Enter Date and Airport Again')
-            continue
+            update.message.reply_text('You entered incorrect airport name. Type /start and then enter Date and Airport Again')
+            return ConversationHandler.END
 
         icao = ru_port.iloc[0][1]
 
@@ -235,10 +236,20 @@ def ask_user(update: Update, context: CallbackContext):
             RU_AIRPORTS_2.reset_index(inplace=True)
             most_visited_dests = most_visited_dests[["ICAO", "Country", "Airport", "Amount"]]
 
-            # Unique countries
-            most_visited_countries = most_visited_dests.loc[most_visited_dests["Country"] != "Russia"].copy()
-            most_visited_countries = most_visited_countries['Country'].value_counts().rename_axis(
-                'Country').reset_index(name='Amount')
+            # Unique countries (omitting NaNs)
+            most_visited_countries = most_visited_dests.loc[most_visited_dests["Country"] != "Russia"].dropna().copy()
+            #print(most_visited_countries['Country'].unique())
+            countries, amounts = [],[]
+            for country in most_visited_countries['Country'].unique():
+                countries.append(country)
+                amount = 0
+                for index, row in most_visited_countries.iterrows():
+                    if country == row['Country']:
+                        amount += row['Amount']
+                amounts.append(amount)
+
+            most_visited_countries = pd.DataFrame({'Country':countries,'Amount':amounts})
+            #most_visited_countries = most_visited_countries['Country'].value_counts().rename_axis('Country').reset_index(name='Amount')
 
             # 4
             num_unique_countries = most_visited_countries.shape[0]
