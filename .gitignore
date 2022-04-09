@@ -1,6 +1,9 @@
-
+.idea/
+.idea/workspace.xml
 .idea/sonarlint/issuestore/index.pb
 .idea/FlightAnalysis.iml
 .idea/misc.xml
-.idea/FlightAnalysis.iml
 __pycache__/config.cpython-38.pyc
+static/flightlist_20220101_20220131.csv.gz
+static/flightlist_20220201_20220228.csv.gz
+

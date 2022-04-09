@@ -42,7 +42,7 @@ logger = logging.getLogger(__name__)
 #GENDER, PHOTO, LOCATION, BIO = range(4)
 USER_INPUT = range(1)
 
-
+#Uploaded csv's to Cloudinary.com in order to use the data in Heroku Deployment
 FLIGHTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767306/all_flights_bcvdb7.csv',index_col=0)
 INT_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767318/international_airports_ocls7g.csv',index_col=0)
 RU_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767325/russian_airports_h7aef4.csv',index_col=0)
@@ -118,6 +118,7 @@ def create_plt(df, option):
     plt.ylabel('Amount of Flights', fontsize=10)
     plt.xticks(range(0,len(x)),x, fontsize=8, rotation=45)
     plt.margins(y=0.2)
+    plt.locator_params(axis="both", integer=True, tight=True)
     plt.bar(x=x, height=y)
 
     if option == "dest":
@@ -150,7 +151,7 @@ def ask_user(update: Update, context: CallbackContext):
     user_date_status, user_airport_status = False, False
     while not user_date_status and not user_airport_status:
         user_date_status, user_airport_status = False, False
-        # Testing Purposes
+        # Testing Purposes 
         # user_input = "01 01 2022, Sheremetyevo" # "31 January 2022 Sheremetyevo"
 
         # Separate date and airport
