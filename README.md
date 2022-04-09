@@ -7,6 +7,11 @@ My intent with ths project was to hone my pandas skills, learn basic web scrapin
 A person types "Date, Russian Airport" to receive flight statistics from this airport for this specific date from \
 __January 1,2022 until February 22,2022__.
 
+![screenshot](README_files/Interface.png)
+![plot](README_files/Destinations.jpeg)
+![plot](README_files/Countries.jpeg)
+
+
 ## Main Files
 
 `main.py` and `RusAirtraffic.ipynb` are two main files that can be used to extract the statistics.
