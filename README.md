@@ -19,6 +19,7 @@ __January 1,2022 until February 22,2022__.
     <img alt="plot2" height="300" src="README_files/Countries.jpeg" width="300"/>
   </div>
 </div>
+
 <img alt="screenshot" height="300" src="README_files/Interface.png" />
 <img alt="plot" height="300" src="README_files/Destinations.jpeg" width="300"/>
 <img alt="plot2" height="300" src="README_files/Countries.jpeg" width="300"/>
