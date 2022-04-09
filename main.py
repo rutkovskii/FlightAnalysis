@@ -273,7 +273,7 @@ def ask_user(update: Update, context: CallbackContext):
                 # 5.1
                 if num_unique_countries > 2:
                     create_plt(most_visited_countries, option="country")
-
+                    
                 media_group = []
                 if os.path.exists('dest.png'):
                     media_group.append(InputMediaPhoto(open('dest.png', 'rb')))
