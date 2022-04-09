@@ -118,7 +118,6 @@ def create_plt(df, option):
     plt.ylabel('Amount of Flights', fontsize=10)
     plt.xticks(range(0,len(x)),x, fontsize=8, rotation=45)
     plt.margins(y=0.2)
-    plt.locator_params(axis="both", integer=True, tight=True)
     plt.bar(x=x, height=y)
 
     if option == "dest":

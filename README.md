@@ -41,13 +41,14 @@ To run Telegram Bot, I use Heroku.
 ### Neglections
 
 1. Neglected flights that are flying out and returning to the same airport (but it sounds reasonable to do)
-2. There a more destination airports than what I have parsed, therefore I needed to not include airports for which I did\
-3. not have name and country when plotting.
+2. There a more destination airports than what I have parsed, therefore I needed to not include airports for which I did not have name and country when plotting.
+
 
 ### Improvements that can be done
 1. Correct Pt.2 of Neglections to additional parsing of data
 2. Add more flight data from https://zenodo.org/record/6325961#.YkHzUzdBxQI
 3. Deploy on the web using Flask 
+4. Y-axis have containing integers
 
 Date of first edit: 04/09/2022
 Date of last edit: 04/09/2022
