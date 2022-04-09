@@ -7,9 +7,21 @@ My intent with ths project was to hone my pandas skills, learn basic web scrapin
 A person types "Date, Russian Airport" to receive flight statistics from this airport for this specific date from \
 __January 1,2022 until February 22,2022__.
 
-![screenshot](README_files/Interface.png)
-![plot](README_files/Destinations.jpeg)
-![plot](README_files/Countries.jpeg)
+
+<div class="row">
+  <div class="column">
+    <img alt="screenshot" height="300" src="README_files/Interface.png" />
+  </div>
+  <div class="column">
+    <img alt="plot" height="300" src="README_files/Destinations.jpeg" width="300"/>
+  </div>
+  <div class="column">
+    <img alt="plot2" height="300" src="README_files/Countries.jpeg" width="300"/>
+  </div>
+</div>
+<img alt="screenshot" height="300" src="README_files/Interface.png" />
+<img alt="plot" height="300" src="README_files/Destinations.jpeg" width="300"/>
+<img alt="plot2" height="300" src="README_files/Countries.jpeg" width="300"/>
 
 
 ## Main Files
