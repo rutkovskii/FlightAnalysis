@@ -133,7 +133,7 @@ def create_plt(df, option):
 def start(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Hi! My name is FlightAnalyzer Bot.\n'
-        'I can send flight statistics for a certain day and airport in Russia from 1st of'
+        'I can send flight statistics for a certain day and airport in Russia from 1st of '
         'January, 2022 until 28th of February, 2022.\n\n'
         'Send /cancel to stop talking to me.\n\n'
         'Type Date and Airport in this format: "dd mm yyyy, Airport Name"\n'
