@@ -14,13 +14,16 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
 
+import os
 import pandas as pd
 import re
 from datetime import datetime
 import matplotlib.pyplot as plt
 import os.path
-from config import TOKEN
+#from config import TOKEN
 import logging
+
+TOKEN = os.environ.get('TOKEN')
 
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, InputMediaPhoto
 from telegram.ext import (
