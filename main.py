@@ -1,55 +1,28 @@
-#!/usr/bin/env python
-# pylint: disable=C0116,W0613
-# This program is dedicated to the public domain under the CC0 license.
-
-"""
-First, a few callback functions are defined. Then, those functions are passed to
-the Dispatcher and registered at their respective places.
-Then, the bot is started and runs until we press Ctrl-C on the command line.
-
-Usage:
-Example of a bot-user conversation using ConversationHandler.
-Send /start to initiate the conversation.
-Press Ctrl-C on the command line or send a signal to the process to stop the
-bot.
-"""
-
 import os
 import pandas as pd
 import re
 from datetime import datetime
 import matplotlib.pyplot as plt
 import os.path
-#from config import TOKEN
 import logging
+#from config import TOKEN
 
+# From Heroku Environment
 TOKEN = os.environ.get('TOKEN')
 
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, InputMediaPhoto
-from telegram.ext import (
-    Updater,
-    CommandHandler,
-    MessageHandler,
-    Filters,
-    ConversationHandler,
-    CallbackContext,
-)
+from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, CallbackContext)
 
 # Enable logging
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
-)
-
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-#GENDER, PHOTO, LOCATION, BIO = range(4)
 USER_INPUT = range(1)
 
 #Uploaded csv's to Cloudinary.com in order to use the data in Heroku Deployment
 FLIGHTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767306/all_flights_bcvdb7.csv',index_col=0)
 INT_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767318/international_airports_ocls7g.csv',index_col=0)
 RU_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767325/russian_airports_h7aef4.csv',index_col=0)
-#logger.info(FLIGHTS)
 FLIGHTS['day'] = pd.to_datetime(FLIGHTS['day'], format="%Y/%m/%d").dt.date
 
 #print(FLIGHTS)
@@ -69,9 +42,9 @@ def pop_printer(df, option: str):
         elif i == 3: suffix = "rd"
         elif i == 4 or i == 5: suffix = "th"
 
-
         if option == "dest":
-            reply_pop += f"\n—{i}{suffix} most traveled destination is {row['Airport']}, {row['Country']} with {row['Amount']} flight(s)."
+            reply_pop += f"\n—{i}{suffix} most traveled destination is {row['Airport']}," \
+                        + " {row['Country']} with {row['Amount']} flight(s)."
         elif option == "country":
             reply_pop += f"\n—{i}{suffix} most traveled is country {row['Country']} with {row['Amount']} flight(s)."
 
@@ -153,6 +126,7 @@ def ask_user(update: Update, context: CallbackContext):
     user_date_status, user_airport_status = False, False
     while not user_date_status and not user_airport_status:
         user_date_status, user_airport_status = False, False
+
         # Testing Purposes 
         # user_input = "01 01 2022, Sheremetyevo" # "31 January 2022 Sheremetyevo"
 
@@ -202,21 +176,20 @@ def ask_user(update: Update, context: CallbackContext):
         ru_port = RU_AIRPORTS[RU_AIRPORTS["Airport"].str.contains(user_airport)]
 
         if ru_port.empty:
-            update.message.reply_text('You entered incorrect airport name. Type /start and then enter Date and Airport Again')
+            update.message.reply_text('You entered incorrect airport name.'\
+                                    + 'Type /start and then enter Date and Airport Again')
             return ConversationHandler.END
 
         icao = ru_port.iloc[0][1]
 
         if icao:
-            # can be a method
-
             # cleaning on the day of flight
             ru_port_flights = FLIGHTS.loc[FLIGHTS['day'] == date]
             # cleaning on origin Russian Airport and removing from-into flights
             ru_port_flights = ru_port_flights.loc[ru_port_flights['origin'] == icao]
             ru_port_flights = ru_port_flights.loc[ru_port_flights['destination'] != icao]
-            ################## Statistics ##################
 
+            ################## Statistics ##################
             # 1
             num_flights = len(ru_port_flights)  # Number of flights from airport
             if num_flights > 0:
@@ -252,7 +225,8 @@ def ask_user(update: Update, context: CallbackContext):
                 amounts.append(amount)
 
             most_visited_countries = pd.DataFrame({'Country':countries,'Amount':amounts})
-            #most_visited_countries = most_visited_countries['Country'].value_counts().rename_axis('Country').reset_index(name='Amount')
+            #most_visited_countries = \
+            #         most_visited_countries['Country'].value_counts().rename_axis('Country').reset_index(name='Amount')
 
             # 4
             num_unique_countries = most_visited_countries.shape[0]
@@ -292,11 +266,10 @@ def ask_user(update: Update, context: CallbackContext):
                 if os.path.exists('country.png'):
                     os.remove('country.png')
 
+            logger.info(reply_text)
+
             update.message.reply_text('\nThank you for using me! To use again, press /start.\n')
             return ConversationHandler.END
-
-
-
 
 
 
@@ -304,16 +277,12 @@ def cancel(update: Update, context: CallbackContext) -> int:
     """Cancels and ends the conversation."""
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
-    update.message.reply_text(
-        'Thank you for using me!', reply_markup=ReplyKeyboardRemove()
-    )
-
+    update.message.reply_text('Thank you for using me!', reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 
 def main() -> None:
     """Run the bot."""
-    # Create the Updater and pass it your bot's token.
     updater = Updater(TOKEN)
 
     # Get the dispatcher to register handlers
@@ -321,9 +290,7 @@ def main() -> None:
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
-        states={
-            USER_INPUT:[MessageHandler(Filters.text, ask_user)],
-        },
+        states={USER_INPUT:[MessageHandler(Filters.text, ask_user)],},
         fallbacks=[CommandHandler('cancel', cancel)],
     )
 
@@ -332,9 +299,7 @@ def main() -> None:
     # Start the Bot
     updater.start_polling()
 
-    #ou press Ctrl-C or the process receives SIGINT,
-    # SIGTERM or SIGABRT. This should be used most of the time, since
-    # start_polling() is non-blocking and will stop the bot gracefully. Run the bot until y
+    # press Ctrl-C t ostop
     updater.idle()
 
 
