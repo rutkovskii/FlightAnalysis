@@ -21,8 +21,10 @@ USER_INPUT = range(1)
 
 #Uploaded csv's to Cloudinary.com in order to use the data in Heroku Deployment
 FLIGHTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767306/all_flights_bcvdb7.csv',index_col=0)
-INT_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767318/international_airports_ocls7g.csv',index_col=0)
-RU_AIRPORTS = pd.read_csv('https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767325/russian_airports_h7aef4.csv',index_col=0)
+INT_AIRPORTS = pd.read_csv(
+    'https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767318/international_airports_ocls7g.csv',index_col=0)
+RU_AIRPORTS = pd.read_csv(
+    'https://res.cloudinary.com/dnvoqaxlg/raw/upload/v1648767325/russian_airports_h7aef4.csv',index_col=0)
 FLIGHTS['day'] = pd.to_datetime(FLIGHTS['day'], format="%Y/%m/%d").dt.date
 
 #print(FLIGHTS)
@@ -44,7 +46,7 @@ def pop_printer(df, option: str):
 
         if option == "dest":
             reply_pop += f"\n—{i}{suffix} most traveled destination is {row['Airport']}," \
-                        + " {row['Country']} with {row['Amount']} flight(s)."
+                        + f" {row['Country']} with {row['Amount']} flight(s)."
         elif option == "country":
             reply_pop += f"\n—{i}{suffix} most traveled is country {row['Country']} with {row['Amount']} flight(s)."
 
@@ -135,12 +137,14 @@ def ask_user(update: Update, context: CallbackContext):
 
         # Not comma separated
         if len(elements) < 2:
-            update.message.reply_text('You forgot to add comma after date. Type /start and then enter Date and Airport Again!')
+            update.message.reply_text(
+                'You forgot to add comma after date. Type /start and then enter Date and Airport Again!')
             return ConversationHandler.END
 
         # Missing airport or date
         if (elements[0] == "") or (elements[1] == ""):
-            update.message.reply_text('You forgot to add date or airport. Type /start and then enter Date and Airport Again')
+            update.message.reply_text(
+                'You forgot to add date or airport. Type /start and then enter Date and Airport Again')
             return ConversationHandler.END
 
         # Cleaning date
@@ -176,8 +180,8 @@ def ask_user(update: Update, context: CallbackContext):
         ru_port = RU_AIRPORTS[RU_AIRPORTS["Airport"].str.contains(user_airport)]
 
         if ru_port.empty:
-            update.message.reply_text('You entered incorrect airport name.'\
-                                    + 'Type /start and then enter Date and Airport Again')
+            update.message.reply_text(
+                'You entered incorrect airport name. Type /start and then enter Date and Airport Again')
             return ConversationHandler.END
 
         icao = ru_port.iloc[0][1]
