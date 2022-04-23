@@ -1,0 +1,4 @@
+git checkout main
+heroku login
+heroku git:remote --app flightanalyzer
+git push heroku main:main
